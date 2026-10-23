@@ -85,3 +85,5 @@ ChatGPT and Claude assisted with development, code review, and documentation.
 Team HYNEX | FutureStack Hackathon 2026
 
 **Status:** Round 2 MVP
+
+**Live Demo:** https://brandproof-ai.onrender.com/
