@@ -1,0 +1,16 @@
+# Local data and secrets
+.env
+.env.*
+!.env.example
+*.db
+*.db-shm
+*.db-wal
+# Python environments and caches
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+# Editors and OS
+.vscode/
+.DS_Store
