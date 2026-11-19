@@ -84,14 +84,3 @@ Team HYNEX | FutureStack Hackathon 2026
 **Status:** Round 2 MVP
 
 **Live Demo:** https://brandproof-ai.onrender.com/
-
-
-
-
-
-
-
-
-### Deployment and security
-
-Render start command: `uvicorn main:app --host 0.0.0.0 --port $PORT`. Build command: `pip install -r requirements.txt`. Add `GROQ_API_KEY` as a secret environment variable on Render; never commit it. **Important:** this app initializes public demo users with the shared password `Demo123!`. Do not store real brand secrets or personal data in this demo deployment; replace demo authentication and add durable storage before production use. SQLite on Render's free ephemeral filesystem can be lost after redeploy or restart.
