@@ -50,15 +50,15 @@ Use these credentials to explore the application's different roles.
 | Creator | `creator` | `Demo123!` |
 | Reviewer | `reviewer` | `Demo123!` |
 
-**Note:** These are demonstration accounts intended only for hackathon evaluation. Do not use them with real or sensitive data.
+**Note:** These are demonstration accounts intended only for hackathon evaluation.
 
-## AI Configuration
+
+# AI Configuration
 
 Set the `GROQ_API_KEY` environment variable to enable AI analysis.
 
 Without an API key, BrandProof AI continues using its rule-based checking engine.
 
-Never upload API keys or `.env` files to GitHub.
 
 ## How It Works
 
@@ -75,9 +75,6 @@ Never upload API keys or `.env` files to GitHub.
 - OCR requires Tesseract on the hosting server.
 - Public deployment and full production testing are pending.
 
-## AI Disclosure
-
-ChatGPT and Claude assisted with development, code review, and documentation.
 
 ## Project Author
 
@@ -88,23 +85,12 @@ Team HYNEX | FutureStack Hackathon 2026
 
 **Live Demo:** https://brandproof-ai.onrender.com/
 
-## Round 3 — AI Guideline-to-Rules Converter (implemented)
 
-Admin users can open **AI rule converter**, paste brand guidelines, and request structured rule suggestions via the server-side Groq API. The generated rules remain editable candidates until an administrator verifies the source and explicitly approves them. Approval saves them to the existing knowledge vault. The browser never receives the Groq API key.
 
-Required server environment variables: `GROQ_API_KEY` and optionally `GROQ_MODEL` (defaults to `llama-3.1-8b-instant`). When Groq is unavailable, the suggestion endpoint reports an error rather than inventing rules. This feature sends pasted guideline text to the configured Groq service; use fictional or authorized data only.
 
-**Round 3 status:** Improvement 2 implemented; Improvements 1 (Brand Drift Radar) and 3 (Cross-Content Consistency Checker) are not implemented in this version. Groq extraction still requires live integration testing.
 
-## Round 3 improvements (2026)
 
-1. **Brand Drift Radar** (`/api/drift`): dashboard of current saved audit findings, frequently flagged vault topics, affected draft counts and daily totals. It does not preserve historical snapshots across re-audits; dates represent draft update dates.
-2. **AI Guideline-to-Rules Converter** (`/api/guidelines/suggest`, `/api/guidelines/approve`): administrators paste brand guidelines and receive Groq-generated candidate rules. Administrators edit them and supply a trustworthy source before explicitly approving them into the vault. Requires server-side `GROQ_API_KEY` and optionally `GROQ_MODEL`.
-3. **Cross-Content Consistency Checker** (`/api/consistency/compare`): compare 2–12 saved drafts, displaying explicit conflicting dates, prices and numbers side by side for matching active vault topics. This is a conservative checker, not a guarantee that all content is consistent.
 
-### Test
-
-Run `python -m pytest -q` from the project directory. The Round 3 test suite checks role restrictions, approval, cross-content conflicts, missing drafts and radar data. Live Groq extraction and browser-based usability still require manual verification after deployment.
 
 ### Deployment and security
 
